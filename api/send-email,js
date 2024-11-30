@@ -1,0 +1,50 @@
+const nodemailer = require('nodemailer');
+
+export default async function handler(req, res) {
+  if (req.method === 'POST') {
+    const { nome, email, telefone, idade, elo } = req.body;
+
+    // Configurar o transporte SMTP
+    const transporter = nodemailer.createTransport({
+      host: 'localhost',
+      port: 1025, // Porta usada pelo MailHog
+      secure: false,
+    });
+
+    try {
+      // Enviar o e-mail para o administrador
+      await transporter.sendMail({
+        from: '"Pré-cadastro" <no-reply@titiltei.com>',
+        to: 'admin@titiltei.com',
+        subject: 'Novo Pré-cadastro Recebido',
+        html: `
+          <h2>Novo Pré-cadastro</h2>
+          <p><strong>Nome:</strong> ${nome}</p>
+          <p><strong>E-mail:</strong> ${email}</p>
+          <p><strong>Telefone:</strong> ${telefone}</p>
+          <p><strong>Idade:</strong> ${idade}</p>
+          <p><strong>Elo:</strong> ${elo}</p>
+        `,
+      });
+
+      // Enviar um e-mail de confirmação ao usuário
+      await transporter.sendMail({
+        from: '"TiTiltei Coaching" <no-reply@titiltei.com>',
+        to: email,
+        subject: 'Confirmação de Pré-cadastro',
+        html: `
+          <h2>Pré-cadastro Realizado!</h2>
+          <p>Olá, ${nome}!</p>
+          <p>Obrigado por realizar o pré-cadastro no coaching TiTiltei. Em breve entraremos em contato.</p>
+        `,
+      });
+
+      res.status(200).json({ message: 'E-mails enviados com sucesso!' });
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ message: 'Erro ao enviar e-mail.' });
+    }
+  } else {
+    res.status(405).json({ message: 'Método não permitido.' });
+  }
+}

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coaching do TiTiltei</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="public/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="icon" href="public/fd6dda32-3cf2-4691-a912-e851c3b53129-profile_image-70x70.png" type="image/x-icon">
+</head>
+
+<body>
+  <!-- Header Section -->
+  <header class="header fixed-top">
+    <nav class="navbar navbar-expand-lg py-3">
+      <div class="container">
+        <a class="navbar-brand" href="#">TiTiltei</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#about">Sobre</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#coaching">Coaching</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#pre-registration">Pré-cadastro</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero d-flex align-items-center justify-content-center text-center position-relative">
+    <div class="overlay"></div>
+    <div class="container position-relative z-index-2">
+      <h1 class="display-4 mb-3">TiTiltei Main Jungler Challenger</h1>
+      <p class="lead mb-4">Transforme sua gameplay com dicas, estratégias e insights exclusivos para se tornar um dos melhores junglers no League of Legends!</p>
+      <a href="#coaching" class="btn btn-primary btn-lg">Comece Agora</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Sobre Mim</h2>
+      <p class="text-center mx-auto mb-4">Sou um streamer focado exclusivamente no campeão Shaco, com mais de 10 anos de experiência na Soloqueue brasileira e norte americana. Residente de Natal/RN, alcancei o ranking de desafiante jogando nas filas ranqueadas e me tornei conhecido pelas estratégias únicas e jogadas imprevisíveis que desenvolvi com Shaco.</p>
+      <div class="text-center">
+        <img src="public/titi.jfif" alt="Titiltei jogando Shaco" class="about-image">
+      </div>
+    </div>
+  </section>
+
+  <!-- Coaching Section -->
+  <section id="coaching" class="coaching py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Coaching Personalizado</h2>
+      <p class="text-center mb-5">Se você está preso no mesmo elo e quer evoluir no League of Legends, meu programa de coaching pode ajudar. Com aulas interativas, eu vou te ensinar:</p>
+
+      <div class="row coaching-features">
+        <div class="feature-item">
+          <div class="feature-icon">
+            <i class="fas fa-video fa-3x"></i>
+          </div>
+          <h3>Análise de Replays</h3>
+          <p>Reveja suas partidas comigo para entender onde você está errando e como pode melhorar.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">
+            <i class="fas fa-chess fa-3x"></i>
+          </div>
+          <h3>Estratégias Avançadas</h3>
+          <p>Aprenda como manipular o campo de batalha, criar emboscadas e gerenciar recursos como um desafiante.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">
+            <i class="fas fa-cogs fa-3x"></i>
+          </div>
+          <h3>Builds e Runas</h3>
+          <p>Descubra as melhores combinações de itens e runas para diferentes matchups e estilos de jogo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pré-Cadastro Section -->
+  <section id="pre-registration" class="pre-registration py-5">
+    <div class="container">
+      <h3 class="text-center">Pré-cadastro</h3>
+      <p class="text-center mb-4">
+        Preencha o formulário abaixo para receber informações sobre planos e ofertas exclusivas.
+      </p>
+      <form class="pre-registration-form shadow" id="preRegistrationForm">
+        <div class="form-group">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" name="nome" class="form-control" placeholder="Digite seu nome completo" required>
+        </div>
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" class="form-control" placeholder="Seu melhor e-mail" required>
+        </div>
+        <div class="form-group">
+          <label for="telefone">Telefone</label>
+          <input type="tel" id="telefone" name="telefone" class="form-control" placeholder="(xx) xxxxx-xxxx" required>
+        </div>
+        <div class="form-group">
+          <label for="idade">Idade</label>
+          <input type="number" id="idade" name="idade" class="form-control" placeholder="Digite sua idade" min="12" required>
+        </div>
+        <div class="form-group">
+          <label for="elo">Elo Atual</label>
+          <input type="text" id="elo" name="elo" class="form-control" placeholder="Ex: Prata, Ouro, Platina" required>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg w-100 mt-3">Enviar</button>
+      </form>      
+    </div>
+  </section>
+
+  <!-- Popup Modal -->
+  <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-success text-white">
+          <h5 class="modal-title" id="successModalLabel">Pré-cadastro Realizado!</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center">
+          <i class="fas fa-check-circle fa-3x text-success mb-3"></i>
+          <p>Seu pré-cadastro foi realizado com sucesso! Em breve entraremos em contato com você.</p>
+        </div>
+        <div class="modal-footer justify-content-center">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer class="footer bg-dark text-white text-center py-4">
+    <div class="container">
+      <p>© 2024 Titiltei - Todos os direitos reservados.</p>
+      <div class="social-icons d-flex justify-content-center mt-3">
+        <a href="#" class="me-3">
+          <i class="fab fa-twitch"></i>
+        </a>
+        <a href="#" class="me-3">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

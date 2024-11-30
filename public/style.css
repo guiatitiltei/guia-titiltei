@@ -1,0 +1,462 @@
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #121212;
+  color: #f0f0f0;
+  line-height: 1.6;
+}
+
+/* Header Section */
+.header {
+  background: linear-gradient(90deg, #1a1a1a, #111111); /* Gradiente elegante */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Sombra suave */
+  transition: background 0.3s ease; /* Transição suave */
+  z-index: 1000;
+}
+
+.navbar {
+  padding: 0.5rem 1rem;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #00aaff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+  color: #ffffff;
+}
+
+.nav-link {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #dddddd;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #00aaff;
+}
+
+/* Animated underline for nav-links */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: #00aaff;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%; /* Animação do sublinhado */
+}
+
+/* Mobile menu (hamburger) */
+.navbar-toggler {
+  border: none;
+  outline: none;
+  transition: transform 0.3s ease;
+}
+
+.navbar-toggler:focus {
+  transform: rotate(90deg); /* Efeito ao pressionar */
+}
+
+.navbar-toggler-icon {
+  background-color: #00aaff;
+  width: 30px;
+  height: 3px;
+  display: block;
+  margin: 5px auto;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: '';
+  display: block;
+  background-color: #00aaff;
+  width: 30px;
+  height: 3px;
+  border-radius: 2px;
+  margin: 5px auto;
+  transition: all 0.3s ease;
+}
+
+.navbar-toggler-icon:hover {
+  background-color: #ffffff;
+}
+
+/* Navbar mobile menu links */
+@media (max-width: 768px) {
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .nav-link {
+    padding: 0.5rem 0;
+    font-size: 1.2rem;
+  }
+}
+
+/* Hero Section */
+.hero {
+  height: 60vh;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: #f4f4f4;
+  background-image: url('shaco2.jpg'); /* Imagem de fundo do Shaco */
+  animation: backgroundAnimation 20s infinite linear; /* Animação do fundo */
+}
+
+.hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+/* Animação do fundo */
+@keyframes backgroundAnimation {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.hero h1 {
+  position: relative;
+  font-size: 3rem;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.hero p {
+  position: relative;
+  font-size: 1.4rem;
+  z-index: 2;
+}
+
+.hero .btn {
+  position: relative;
+  font-size: 1.4rem;
+  padding: 1.2rem 2.4rem;
+  background-color: #00aaff;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  z-index: 2;
+  transition: background-color 0.3s;
+}
+
+.hero .btn:hover {
+  background-color: #0088cc;
+}
+
+
+/* About Section */
+.about {
+  background-color: #1a1a1a;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.about p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.about img.about-image {
+  max-width: 450px;
+  height: auto;
+  border-radius: 50%;
+  border: 3px solid #00aaff;
+}
+
+/* Coaching Section */
+.coaching {
+  background-color: #171717;
+  padding: 4rem 2rem;
+}
+
+.coaching h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.coaching p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.coaching-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.feature-item {
+  flex: 1 1 calc(33.333% - 1rem); /* For three items per row */
+  background-color: #1f1f1f;
+  color: #f0f0f0;
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.feature-icon i {
+  color: #00aaff;
+  transition: color 0.3s ease;
+}
+
+.feature-item:hover .feature-icon i {
+  color: #0088cc;
+}
+
+.feature-item h3 {
+  font-size: 1.6rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.feature-item p {
+  font-size: 1.2rem;
+  color: #cccccc;
+}
+
+/* Pre-registration Form */
+.pre-registration-form {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem;
+  background-color: #1f1f1f; /* Fundo levemente mais claro */
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.pre-registration-form label {
+  font-size: 1rem;
+  font-weight: bold; /* Destaque maior para as labels */
+  color: #f0f0f0; /* Contraste melhorado para labels */
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+/* Pre-registration form inputs */
+.pre-registration-form input {
+  padding: 1rem;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background-color: #1a1a1a; /* Cor de fundo */
+  color: #f0f0f0; /* Cor do texto digitado */
+}
+
+/* Placeholder styling */
+.pre-registration-form input::placeholder {
+  color: #aaa; /* Cor do placeholder */
+  font-style: normal; /* Remove o itálico */
+}
+
+/* Ensure input text remains legible on focus and during typing */
+.pre-registration-form input:focus {
+  outline: none; /* Remove a borda padrão ao focar */
+  border-color: #00aaff; /* Borda azul no foco */
+  color: #f0f0f0; /* Garante que o texto digitado fique claro */
+  background-color: #1a1a1a; /* Fundo consistente */
+}
+
+
+/* Botão */
+.pre-registration-form button {
+  font-size: 1.4rem;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #00aaff;
+  border: none;
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.pre-registration-form button:hover {
+  background-color: #0088cc;
+  transform: scale(1.02); /* Pequeno zoom no hover */
+  box-shadow: 0px 4px 10px rgba(0, 136, 204, 0.6); /* Sombra leve no hover */
+}
+
+.pre-registration-form button:active {
+  background-color: #0078b3; /* Cor mais escura no clique */
+  transform: scale(0.98); /* Leve contração no clique */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .pre-registration-form {
+    padding: 1.5rem;
+  }
+
+  .pre-registration-form input {
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+
+  .pre-registration-form button {
+    font-size: 1.2rem;
+    padding: 0.8rem;
+  }
+}
+
+
+
+
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .coaching-features {
+    flex-direction: column;
+  }
+
+  .feature-item {
+    flex: 1 1 100%;
+  }
+
+  .pre-registration-form {
+    width: 100%;
+  }
+
+  .about img.about-image {
+    max-width: 150px;
+  }
+}
+
+/* Footer Geral */
+.footer {
+  background-color: #111; /* Fundo escuro */
+  color: #ccc; /* Texto com cor neutra */
+  font-size: 16px; /* Tamanho do texto */
+  padding: 60px 0; /* Aumenta a altura vertical */
+  text-align: center;
+}
+
+/* Texto do Footer */
+.footer p {
+  margin-bottom: 16px;
+  font-size: 18px; /* Texto mais destacado */
+}
+
+/* Social Icons */
+.footer .social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px; /* Aumenta o espaçamento entre os ícones */
+}
+
+.footer .social-icons a {
+  color: #ccc;
+  font-size: 36px; /* Ícones maiores */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+  color: #fff; /* Destaca os ícones ao passar o mouse */
+  transform: scale(1.2); /* Efeito de zoom ao passar o mouse */
+}
+
+/* Modal Header */
+.modal-header.bg-success {
+  background: linear-gradient(90deg, #28a745, #218838);
+  border-bottom: none;
+}
+
+.modal-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Modal Icon */
+.modal-body i {
+  animation: bounce 1s infinite alternate; /* Animação para o ícone */
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Modal Button */
+.modal-footer .btn-primary {
+  background-color: #00aaff;
+  border: none;
+  font-size: 1rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+}
+
+.modal-footer .btn-primary:hover {
+  background-color: #0088cc;
+}
+
+/* Estilo do texto no modal */
+.modal-body p {
+  color: #343a40; /* Cor escura para garantir melhor contraste */
+  font-weight: bold; /* Deixar o texto em negrito */
+}
