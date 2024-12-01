@@ -264,76 +264,48 @@ body {
   color: #cccccc;
 }
 
-/* Pre-registration Form */
-.pre-registration-form {
-  display: grid;
-  gap: 1.5rem;
-  margin-top: 2rem;
-  max-width: 500px;
+//* Pre-registration Section */
+.pre-registration {
+  background-color: #222; /* Fundo mais claro para a área de pré-cadastro */
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.pre-registration h3 {
+  font-size: 2.5rem;
+  color: #00aaff; /* Cor para o título */
+  margin-bottom: 1rem;
+}
+
+.pre-registration p {
+  font-size: 1.2rem;
+  color: #f0f0f0;
+  margin-bottom: 1.5rem;
+  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
-  padding: 2rem;
-  background-color: #1f1f1f; /* Fundo levemente mais claro */
-  border-radius: 10px;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
 }
 
-.pre-registration-form label {
-  font-size: 1rem;
-  font-weight: bold; /* Destaque maior para as labels */
-  color: #f0f0f0; /* Contraste melhorado para labels */
-  margin-bottom: 0.5rem;
-  display: block;
-}
-
-/* Pre-registration form inputs */
-.pre-registration-form input {
-  padding: 1rem;
-  font-size: 1.2rem;
-  border-radius: 8px;
-  border: 1px solid #333;
-  background-color: #1a1a1a; /* Cor de fundo */
-  color: #f0f0f0; /* Cor do texto digitado */
-}
-
-/* Placeholder styling */
-.pre-registration-form input::placeholder {
-  color: #aaa; /* Cor do placeholder */
-  font-style: normal; /* Remove o itálico */
-}
-
-/* Ensure input text remains legible on focus and during typing */
-.pre-registration-form input:focus {
-  outline: none; /* Remove a borda padrão ao focar */
-  border-color: #00aaff; /* Borda azul no foco */
-  color: #f0f0f0; /* Garante que o texto digitado fique claro */
-  background-color: #1a1a1a; /* Fundo consistente */
-}
-
-
-/* Botão */
-.pre-registration-form button {
-  font-size: 1.4rem;
-  padding: 1rem;
-  border-radius: 8px;
+.pre-registration .btn {
+  font-size: 1.5rem;
+  padding: 1.2rem 3rem;
   background-color: #00aaff;
   border: none;
+  border-radius: 8px;
   color: white;
-  font-weight: bold;
   transition: background-color 0.3s ease, transform 0.2s ease;
-  cursor: pointer;
 }
 
-.pre-registration-form button:hover {
+.pre-registration .btn:hover {
   background-color: #0088cc;
-  transform: scale(1.02); /* Pequeno zoom no hover */
-  box-shadow: 0px 4px 10px rgba(0, 136, 204, 0.6); /* Sombra leve no hover */
+  transform: scale(1.05);
 }
 
-.pre-registration-form button:active {
-  background-color: #0078b3; /* Cor mais escura no clique */
-  transform: scale(0.98); /* Leve contração no clique */
+.pre-registration .btn:active {
+  background-color: #0078b3;
+  transform: scale(0.98);
 }
+
 
 /* Responsividade */
 @media (max-width: 768px) {
