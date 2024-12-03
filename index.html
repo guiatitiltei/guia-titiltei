@@ -14,15 +14,14 @@
 <body>
   <!-- Header Section -->
   <header class="header fixed-top">
-    <nav class="navbar navbar-expand-lg py-3">
+    <nav class="navbar navbar-expand-lg navbar-dark py-3">
       <div class="container">
         <a class="navbar-brand" href="#">TiTiltei</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
+          <ul class="navbar-nav ms-auto text-center">
             <li class="nav-item">
               <a class="nav-link" href="#about">Sobre</a>
             </li>
@@ -54,7 +53,7 @@
       <h2 class="text-center mb-4">Sobre Mim</h2>
       <p class="text-center mx-auto mb-4">Sou um streamer focado exclusivamente no campeão Shaco, com mais de 10 anos de experiência na Soloqueue brasileira e norte americana. Residente de Natal/RN, alcancei o ranking de desafiante jogando nas filas ranqueadas e me tornei conhecido pelas estratégias únicas e jogadas imprevisíveis que desenvolvi com Shaco.</p>
       <div class="text-center">
-        <img src="public/titi.jfif" alt="Titiltei jogando Shaco" class="about-image">
+        <img src="public/titi.jfif" alt="Titiltei jogando Shaco" class="about-image img-fluid">
       </div>
     </div>
   </section>
@@ -65,42 +64,46 @@
       <h2 class="text-center mb-4">Guia Personalizado</h2>
       <p class="text-center mb-5">Se você está preso no mesmo elo e quer evoluir no League of Legends, meu guia pode te ajudar a melhorar. Com aulas interativas, eu vou te ensinar:</p>
 
-      <div class="row coaching-features">
-        <div class="feature-item">
-          <div class="feature-icon">
-            <i class="fas fa-video fa-3x"></i>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-video fa-3x"></i>
+            </div>
+            <h3>Análise de Replays</h3>
+            <p>Reveja suas partidas comigo para entender onde você está errando e como pode melhorar.</p>
           </div>
-          <h3>Análise de Replays</h3>
-          <p>Reveja suas partidas comigo para entender onde você está errando e como pode melhorar.</p>
         </div>
-        <div class="feature-item">
-          <div class="feature-icon">
-            <i class="fas fa-chess fa-3x"></i>
+        <div class="col-md-4">
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-chess fa-3x"></i>
+            </div>
+            <h3>Estratégias Avançadas</h3>
+            <p>Aprenda como manipular o campo de batalha, criar emboscadas e gerenciar recursos como um desafiante.</p>
           </div>
-          <h3>Estratégias Avançadas</h3>
-          <p>Aprenda como manipular o campo de batalha, criar emboscadas e gerenciar recursos como um desafiante.</p>
         </div>
-        <div class="feature-item">
-          <div class="feature-icon">
-            <i class="fas fa-cogs fa-3x"></i>
+        <div class="col-md-4">
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-cogs fa-3x"></i>
+            </div>
+            <h3>Builds e Runas</h3>
+            <p>Descubra as melhores combinações de itens e runas para diferentes matchups e estilos de jogo.</p>
           </div>
-          <h3>Builds e Runas</h3>
-          <p>Descubra as melhores combinações de itens e runas para diferentes matchups e estilos de jogo.</p>
         </div>
       </div>
     </div>
   </section>
 
-   <!-- Pré-Cadastro Section -->
-   <section id="pre-registration" class="pre-registration py-5">
-    <div class="container">
-      <h3 class="text-center">Pré-Cadastro</h3>
-      <p class="text-center mb-4">
+  <!-- Pré-Cadastro Section -->
+  <section id="pre-registration" class="pre-registration py-5">
+    <div class="container text-center">
+      <h3>Pré-Cadastro</h3>
+      <p class="mb-4">
         Está pronto para dar o próximo passo e melhorar sua gameplay no League of Legends? Preencha seu pré-cadastro para obter informações exclusivas sobre nossos planos, promoções especiais e como transformar sua performance no jogo!
       </p>
-      <div class="text-center">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeSxuctCyk7HZw_DzFE3zRyv4TcIqnx6e3bUWFstNUanl8lgQ/viewform?usp=sf_link" class="btn btn-primary btn-lg">Faça seu Pré-Cadastro agora</a>
-      </div>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSeSxuctCyk7HZw_DzFE3zRyv4TcIqnx6e3bUWFstNUanl8lgQ/viewform?usp=sf_link" class="btn btn-primary btn-lg">Faça seu Pré-Cadastro agora</a>
     </div>
   </section>
 
@@ -124,7 +127,6 @@
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="script.js"></script>
 </body>
 
 </html>
